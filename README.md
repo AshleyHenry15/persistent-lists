@@ -1,4 +1,5 @@
 # Persistent Task Lists
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e2adfba-988a-466d-8e0a-f32973e19949/deploy-status)](https://app.netlify.com/projects/quarto-persistent-lists/deploys)
 
 A simple Quarto extension that makes task lists persistent across page refreshes and navigation by saving checkbox states in browser local storage.
 
