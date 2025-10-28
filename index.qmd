@@ -1,0 +1,26 @@
+---
+title: "Persistent Task Lists Demo"
+---
+
+# Welcome to Persistent Task Lists
+
+This demo shows how task lists can maintain their checked/unchecked state even when you:
+
+1. Refresh the page
+2. Navigate away and come back
+3. Close the browser and return later
+
+## Try it out!
+
+Check or uncheck some of these tasks:
+
+- [ ] Task 1: Read the documentation
+- [ ] Task 2: Try checking and unchecking this item
+- [ ] Task 3: Refresh the page and see if your changes persist
+- [ ] Task 4: Visit another page and come back
+
+## How it works
+
+This extension uses browser localStorage to save the state of task checkboxes. Each page has its own set of saved states, so tasks on different pages can be managed independently.
+
+The localStorage data is specific to your browser on this device, so other users or your sessions on other devices will see the default (unchecked) state.

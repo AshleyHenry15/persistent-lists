@@ -1,0 +1,6 @@
+title: Persistent Task Lists
+author: Ashley Henry
+version: 1.0.0
+contributes:
+  filters:
+    - persistent-lists.lua

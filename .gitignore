@@ -1,0 +1,53 @@
+# Quarto files
+/.quarto/
+/_site/
+/_book/
+/_freeze/
+
+# R files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.yarn-integrity
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+.claude
+*.swp
+*.swo
+*~
+
+# Build files
+/public/
+/dist/
+/build/
+
+# Logs
+*.log
+logs/

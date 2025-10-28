@@ -1,0 +1,21 @@
+---
+title: "Page 1"
+---
+
+# Task List on Page 1
+
+This is a separate page with its own task list. The state of these checkboxes is stored separately from those on the home page.
+
+## Work Tasks
+
+- [ ] Complete project planning
+- [ ] Update documentation
+- [ ] Schedule team meeting
+- [ ] Review pull requests
+
+## Try navigation
+
+1. Check some of the boxes above
+2. Go to [Page 2](page2.qmd)
+3. Come back to this page
+4. Verify your checkbox selections are still preserved

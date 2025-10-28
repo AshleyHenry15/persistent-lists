@@ -1,0 +1,109 @@
+/*-- scss:defaults --*/
+
+// We will use Bootstrap CSS variables instead of hardcoded values
+// This allows the styling to inherit from the theme
+
+/*-- scss:rules --*/
+
+/* Persistent Task Lists Styling */
+
+/* Add subtle visual feedback when a task is completed */
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+/* Task list container styling */
+ul.task-list {
+  padding-left: 2em !important;
+  list-style-type: none !important;
+}
+
+/* Ensure proper indentation for all nested task lists regardless of depth */
+ul.task-list ul.task-list {
+  padding-left: 2em !important;
+}
+
+/* Handle any level of nesting */
+ul.task-list ul.task-list ul.task-list,
+.task-list .task-list .task-list {
+  padding-left: 2em !important;
+}
+
+/* Task list styling */
+.task-list {
+  /* Background using CSS variables - light transparent background */
+  background-color: rgba(var(--bs-secondary-rgb), 0.05) !important;
+
+  /* Border using theme primary color */
+  border-left-width: 3px !important;
+  border-left-style: solid !important;
+  border-left-color: var(--bs-primary) !important;
+
+  /* Layout */
+  border-radius: 5px !important;
+  padding: 15px 20px !important;
+  margin: 20px 0 !important;
+}
+
+/* Task list items */
+li.task-list-item {
+  margin-bottom: 0.4em !important;
+  display: flex !important;
+  align-items: flex-start !important;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Nested task list items */
+li.task-list-item li.task-list-item {
+  margin-left: 0 !important;  /* Remove any default margin */
+  margin-top: 0.4em !important;  /* Add some vertical spacing */
+}
+
+/* Nested task lists - less prominence */
+.task-list .task-list {
+  /* Border using theme primary color but thinner */
+  border-left-width: 2px !important;
+  border-left-style: solid !important;
+  border-left-color: var(--bs-primary) !important;
+
+  /* Other styling */
+  background-color: transparent !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 10px 15px !important;
+  padding-left: 2em !important;  /* Ensure proper indentation for subtasks */
+}
+
+/* Dark theme override */
+.quarto-dark .task-list,
+html body.quarto-dark .task-list,
+.dark .task-list,
+html body.dark .task-list {
+  /* Darker background for dark themes */
+  background-color: rgba(var(--bs-secondary-rgb), 0.15) !important;
+
+  /* Same border as light theme for consistency */
+  border-left-width: 3px !important;
+  border-left-style: solid !important;
+  border-left-color: var(--bs-primary) !important;
+}
+
+/* High-specificity catch-all selectors to ensure borders show */
+html body .task-list,
+body .task-list,
+ul.task-list,
+div ul.task-list,
+.content ul.task-list,
+.quarto-body ul.task-list {
+  /* Maximum specificity border using theme primary color */
+  border-left: 3px solid var(--bs-primary) !important;
+}

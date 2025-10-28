@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task List Test</title>
+  <script>
+    // Check how the HTML structure of task lists is rendered in Quarto
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log("Document loaded");
+
+      // Log all task lists found
+      const taskLists = document.querySelectorAll('ul.task-list');
+      console.log("Task lists found:", taskLists.length);
+
+      taskLists.forEach((list, i) => {
+        console.log(`Task list ${i}:`, list);
+
+        // Log task items in this list
+        const taskItems = list.querySelectorAll('li.task-list-item');
+        console.log(`- Task items in list ${i}:`, taskItems.length);
+
+        taskItems.forEach((item, j) => {
+          console.log(`-- Task item ${j}:`, item);
+
+          // Check for checkbox
+          const checkbox = item.querySelector('input[type="checkbox"]');
+          console.log(`--- Checkbox found:`, checkbox !== null);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Task List Structure Test</h1>
+
+  <!-- This is how Quarto typically renders task lists -->
+  <ul class="task-list">
+    <li class="task-list-item">
+      <input type="checkbox" />
+      <span>Task 1</span>
+    </li>
+    <li class="task-list-item">
+      <input type="checkbox" checked />
+      <span>Task 2</span>
+    </li>
+  </ul>
+
+  <!-- Test nested task lists -->
+  <ul class="task-list">
+    <li class="task-list-item">
+      <input type="checkbox" />
+      <span>Parent Task</span>
+      <ul class="task-list">
+        <li class="task-list-item">
+          <input type="checkbox" />
+          <span>Child Task</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>

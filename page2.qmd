@@ -1,0 +1,34 @@
+---
+title: "Page 2"
+---
+
+# Task List on Page 2
+
+This page has a different set of tasks. The state of these checkboxes is stored separately from those on other pages.
+
+## Personal Tasks
+
+- [ ] Exercise for 30 minutes
+- [ ] Read a book chapter
+- [ ] Call family
+- [ ] Plan weekend activities
+
+## Nested Task Lists
+
+You can also create nested task lists:
+
+- [ ] Main task 1
+  - [ ] Subtask 1.1
+  - [ ] Subtask 1.2
+- [ ] Main task 2
+  - [ ] Subtask 2.1
+  - [ ] Subtask 2.2
+    - [ ] Sub-subtask 2.2.1
+
+## Testing Instructions
+
+1. Check some boxes on this page
+2. Go to [Page 1](page1.qmd)
+3. Come back to this page
+4. Refresh this page
+5. Verify your selections are preserved

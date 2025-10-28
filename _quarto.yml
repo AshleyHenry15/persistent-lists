@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Persistent Task Lists Demo"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: page1.qmd
+        text: Page 1
+      - href: page2.qmd
+        text: Page 2
+
+format:
+  html:
+    theme: lux
+    #css: styles.css
+    toc: true
+
+filters:
+  - persistent-lists
