@@ -1,7 +1,8 @@
 /*-- scss:defaults --*/
 
-// We will use Bootstrap CSS variables instead of hardcoded values
-// This allows the styling to inherit from the theme
+
+/*-- scss:variables --*/
+$primary: var(--bs-primary);
 
 /*-- scss:rules --*/
 
@@ -43,7 +44,7 @@ ul.task-list ul.task-list ul.task-list,
   /* Border using theme primary color */
   border-left-width: 3px !important;
   border-left-style: solid !important;
-  border-left-color: var(--bs-primary) !important;
+  border-left-color: $primary !important;
 
   /* Layout */
   border-radius: 5px !important;
